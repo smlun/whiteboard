@@ -28,6 +28,19 @@ Rails.application.configure do
 
   #Setting up devise
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  #Setting up Action Mailer
+  
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               'example.com',
+    user_name:            'railspractice91',
+    password:             'P@ssw0rd91',
+    authentication:       'plain',
+    enable_starttls_auto: true  }
+
   
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
