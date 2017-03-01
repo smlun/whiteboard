@@ -11,7 +11,7 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
-         :authentication_keys => [:login]
+         :confirmable, :authentication_keys => [:login]
 
   attr_accessor :login
 
