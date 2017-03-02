@@ -1,3 +1,5 @@
 h1 = @topic.title
 p = @topic.content
 p Last updated at #{@topic.updated_at}
+= link_to "Edit", edit_topic_path(@topic)
+= link_to "Delete Topic", @topic, method: :delete, data: {confirm: 'Are you sure?'}
