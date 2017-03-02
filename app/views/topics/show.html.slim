@@ -16,5 +16,6 @@ h2 Comments
         .panel-heading #{comment.user.username} says:
         .panel-body = comment.content
         .panel-footer
+          = link_to "Edit", edit_topic_comment_path(comment)
           = link_to "Delete", topic_comment_path(@topic, comment), method: :delete, data: {confirm: 'Are you sure?'}
 
