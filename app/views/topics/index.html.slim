@@ -1,0 +1,12 @@
+h1 List of Topics
+- @topics.each do |topic|
+  section.panel.panel-default
+    header.panel-heading
+      h3.panel-title = topic.title
+    article.panel-body
+      p = topic.content
+    footer.panel-footer
+      p Last updated at: #{topic.updated_at}
+      = link_to "More..", topic_path(topic), class: 'btn btn-info'
+
+
