@@ -14,6 +14,6 @@ topics = Topic.create([{title: "How do we do testing on Rails?", content: dummy_
                        {title: "Should we learn Angular.js or React.js?", content: dummy_content, user: newuser},
                        {title: "Is xecutioner a typo?", content: dummy_content, user: newuser}])
 
-comments = Comment.create([{content: "This is a test", ratings: 5, user_id: 1, topic_id: 3},
-                           {content: "This is a test", ratings: 3, user_id: 1, topic_id: 3},
-                           {content: "This is a test", ratings: 8, user_id: 1, topic_id: 3}])
+comments = Comment.create([{content: "This is a test", ratings: 5, user: newuser, topic: topics[0]},
+                           {content: "This is a test", ratings: 3, user: newuser, topic: topics[0]},
+                           {content: "This is a test", ratings: 8, user: newuser, topic: topics[0]}])
