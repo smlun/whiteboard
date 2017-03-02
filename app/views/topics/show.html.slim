@@ -3,3 +3,12 @@ p = @topic.content
 p Last updated at #{@topic.updated_at}
 = link_to "Edit", edit_topic_path(@topic)
 = link_to "Delete Topic", @topic, method: :delete, data: {confirm: 'Are you sure?'}
+
+h2 Comments
+= link_to "New Topic", new_comment_path, class: 'btn btn-default'
+.col-xs-7
+  - @topic.comments.each do |comment| 
+      .panel.panel-info
+        .panel-heading #{comment.user.username} says:
+        .panel-body = comment.content
+
